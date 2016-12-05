@@ -9,28 +9,31 @@ $(document).ready(function() {
 });
 
 function lightActive(){
-  $('.light').on('click', function(){
+  $('.light').on('click', function(e){
       $(this).toggleClass("active");
       console.log("background purple")
   });
 }
 
-function redLight(){
-  $(".redLight").on('click', function(){
+function redLight(e){
+  $(".redLight").on('click', function(e){
     $(this).toggleClass("red");
+    e.stopPropagation();
   });
 }
 
 
-function yellowLight(){
-  $(".yellowLight").on('click', function(){
+function yellowLight(e){
+  $(".yellowLight").on('click', function(e){
     $(this).toggleClass("yellow");
+    e.stopPropagation();
   });
 }
 
-function greenLight(){
-  $(".greenLight").on('click', function(){
+function greenLight(e){
+  $(".greenLight").on('click', function(e){
     $(this).toggleClass("green");
+    e.stopPropagation();
   });
 }
 
